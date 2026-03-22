@@ -28,7 +28,7 @@ This file provides guidance to AI agents when working with code in this reposito
 - Use `gomega/gstruct` for struct comparison.
 - Always testing with ginkgo in Golang, run `ginkgo -v` to run tests
 - Avoid using `time.Sleep` in test, use `Eventually` or `Consistently` instead.
-- Each test `It` should wrap with `SpecContext` and `NodeTimeout` to provide context and grouping.
+- Each test `It` should wrap with `SpecContext` and `NodeTimeout(10 * time.Second)` to provide context and grouping.
 - Having only one parent node per file (var _ = Describe(...)) is recommended to avoid confusion.
 - For simple logic, just add 2-3 test cases is enough.
 - Trying to follow other tests patterns in the same package.
